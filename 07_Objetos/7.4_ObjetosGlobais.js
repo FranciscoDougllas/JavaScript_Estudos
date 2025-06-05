@@ -1,0 +1,1 @@
+//Objetos Globais em JavaScript
