@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Praticando a Manipulação do DOM</title>
+
+  <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+
+    #contacts-list{
+        padding: 20px;
+        background-color: rgb(241, 233, 233);
+        box-shadow: 0 5px 10px;
+    }
+    #contacts-list ul{
+        display: flex;
+        flex-direction: column;
+    }
+    #contacts-list input{
+        width: 100%;
+    }
+  </style>
+  
+</head>
+<body>
+  <h1>Praticando a Manipulação do DOM</h1>
+  <hr>
+
+  <h2>Minha Agenda</h2>
+
+  <button onclick="addContact()">Novo Contato</button>
+  <button onclick="removeContact()">Remover Contato</button>
+
+  <section id="contacts-list"></section>
+
+
+  <script src="./9.4_script.js"></script>
+</body>
+</html>

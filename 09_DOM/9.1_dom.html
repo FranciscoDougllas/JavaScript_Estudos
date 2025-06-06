@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eventos no HTML</title>
+  <style>
+    body {
+      font-family: 'Courier New', Courier, monospace;
+      background: #f0f8ff;
+      margin: 0;
+      padding: 40px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    h1 {
+      color: #007bff;
+    }
+    .exemplo {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px #3332;
+      padding: 24px;
+      margin: 16px 0;
+      width: 400px;
+    }
+    label {
+      font-weight: bold;
+    }
+    input, button {
+      margin-top: 6px;
+      margin-bottom: 12px;
+      padding: 6px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+    button {
+      background: #007bff;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+    .descricao {
+      background: #e0f0ff;
+      border-radius: 6px;
+      padding: 12px;
+      margin-bottom: 24px;
+      font-size: 1rem;
+    }
+    code {
+      background: #e0e0e0;
+      border-radius: 4px;
+      padding: 2px 6px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Eventos no HTML</h1>
+  <div class="descricao">
+    <strong>O que são eventos?</strong><br>
+    Eventos são ações ou ocorrências que acontecem na página, como o usuário clicar em um botão, digitar em um campo, passar o mouse sobre um elemento, etc.<br>
+    Podemos "ouvir" esses eventos e executar funções quando eles acontecem.<br>
+    <br>
+    <strong>Principais eventos:</strong>
+    <ul>
+      <li><code>onmouseenter</code>: Quando o mouse entra em um elemento.</li>
+      <li><code>onchange</code>: Quando o valor de um campo muda.</li>
+      <li><code>onfocus</code>: Quando um campo recebe foco.</li>
+      <li><code>onblur</code>: Quando um campo perde o foco.</li>
+      <li><code>onclick</code>: Quando um botão (ou outro elemento) é clicado.</li>
+    </ul>
+    <strong>Como usar:</strong> Você pode usar eventos diretamente no HTML (inline), ou preferencialmente via JavaScript adicionando listeners.
+  </div>
+
+  <!-- Exemplos Inline -->
+  <div class="exemplo">
+    <h2>Exemplo 1: Eventos Inline (HTML)</h2>
+    <label for="inlineMouseEnter">Entrada do Mouse:</label>
+    <input type="text" id="inlineMouseEnter" onmouseenter="console.log('mouse entered (inline)')"><br>
+
+    <label for="inlineChange">Mudança de Valor:</label>
+    <input type="text" id="inlineChange" onchange="console.log('value changed (inline)')"><br>
+
+    <label for="inlineFocus">Entrada de Foco:</label>
+    <input type="text" id="inlineFocus" onfocus="console.log('gained focus (inline)')"><br>
+
+    <label for="inlineBlur">Saída de Foco:</label>
+    <input type="text" id="inlineBlur" onblur="console.log('lost focus (inline)')"><br>
+
+    <button onclick="console.log('clicked (inline)')">Clique-me!</button>
+  </div>
+
+  <!-- Exemplos com Funções -->
+  <div class="exemplo">
+    <h2>Exemplo 2: Eventos Chamando Funções</h2>
+    <label for="funcMouseEnter">Entrada do Mouse:</label>
+    <input type="text" id="funcMouseEnter" onmouseenter="mouseEnterEvent()"><br>
+
+    <label for="funcChange">Mudança de Valor:</label>
+    <input type="text" id="funcChange" onchange="changeEvent()"><br>
+
+    <label for="funcFocus">Entrada de Foco:</label>
+    <input type="text" id="funcFocus" onfocus="focusEvent()"><br>
+
+    <label for="funcBlur">Saída de Foco:</label>
+    <input type="text" id="funcBlur" onblur="blurEvent()"><br>
+
+    <button onclick="clickEvent()">Clique-me!</button>
+  </div>
+
+  <!-- Exemplos com addEventListener -->
+  <div class="exemplo">
+    <h2>Exemplo 3: Eventos com <code>addEventListener</code> (JavaScript)</h2>
+    <label for="jsMouseEnter">Entrada do Mouse:</label>
+    <input type="text" id="jsMouseEnter"><br>
+
+    <label for="jsChange">Mudança de Valor:</label>
+    <input type="text" id="jsChange"><br>
+
+    <label for="jsFocus">Entrada de Foco:</label>
+    <input type="text" id="jsFocus"><br>
+
+    <label for="jsBlur">Saída de Foco:</label>
+    <input type="text" id="jsBlur"><br>
+
+    <button id="jsButton">Clique-me!</button>
+  </div>
+
+  <script>
+    // Funções para os exemplos com chamada de função
+    function mouseEnterEvent() {
+      console.log('mouse entered (função)');
+    }
+    function changeEvent() {
+      console.log('value changed (função)');
+    }
+    function focusEvent() {
+      console.log('gained focus (função)');
+    }
+    function blurEvent() {
+      console.log('lost focus (função)');
+    }
+    function clickEvent() {
+      alert('clicked (função)');
+    }
+
+    // Exemplo com addEventListener (forma recomendada)
+    document.getElementById('jsMouseEnter').addEventListener('mouseenter', function() {
+      console.log('mouse entered (addEventListener)');
+    });
+    document.getElementById('jsChange').addEventListener('change', function() {
+      console.log('value changed (addEventListener)');
+    });
+    document.getElementById('jsFocus').addEventListener('focus', function() {
+      console.log('gained focus (addEventListener)');
+    });
+    document.getElementById('jsBlur').addEventListener('blur', function() {
+      console.log('lost focus (addEventListener)');
+    });
+    document.getElementById('jsButton').addEventListener('click', function() {
+      alert('clicked (addEventListener)');
+    });
+  </script>
+</body>
+</html>
