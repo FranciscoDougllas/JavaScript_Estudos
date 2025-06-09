@@ -18,8 +18,6 @@ console.log(objeto); // { prop: 'valor', prop2: 'valor2', vida: 100 }
 
 
 
-
-
 // Exemplo de objeto mais complexo:
 const pessoa = {
     nome: "Maria",
