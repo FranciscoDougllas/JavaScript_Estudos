@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.fightarea{
+    width: 100%;
+    max-width: 700px;
+    box-shadow: 0 5px 10px #333;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.lifebar{
+    height: 15px;
+    border: 0.5 solid #333;
+    border-radius: 5px;
+}
+
+.lifebar .bar{
+    height: inherit;
+    background-color: red;
+    border-radius: 2px;
+}
+
+
+.log{
+    width: 100%;
+    max-width: 500px;
+    border: 1px solid dotted #999;
+    height: 200px;
+    overflow-y: scroll;
+    box-shadow: 0 5px 5px;
+    margin-top: 20px;
+    background: rgb(243, 238, 238);
+}
