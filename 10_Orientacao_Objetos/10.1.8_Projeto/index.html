@@ -1,40 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
+    <title>Jogo de Batalha</title>
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <div class="fightarea">
-        <div class="char">
+        <div class="char" id="char">
             <div class="lifebar">
                 <div class="bar"></div>
             </div>
             <strong class="name">---</strong>
             <div>
-                <button class="attcakButton">Atacar</button>
+                <button class="attackButton">Atacar</button>
             </div>
         </div>
 
         <div class="monster">
-            <div class="char">
+            <div class="char" id="monster">
                 <div class="lifebar">
                     <div class="bar"></div>
                 </div>
                 <strong class="name">---</strong>
                 <div>
-                    <button class="attcakButton">Atacar</button>
+                    <button class="attackButton">Atacar</button>
                 </div>
             </div>
         </div>
     </div>
 
-    <ul class="log">
-
-    </ul>
+    <ul class="log"></ul>
 
     <script src="./script.js"></script>
 </body>

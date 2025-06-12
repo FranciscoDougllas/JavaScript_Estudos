@@ -1,48 +1,76 @@
-* {
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #222;
+    color: #fff;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
-body{
+.fightarea {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
+    justify-content: space-around;
+    margin-top: 40px;
 }
 
-.fightarea{
-    width: 100%;
-    max-width: 700px;
-    box-shadow: 0 5px 10px #333;
+.char {
+    background: #333;
     padding: 20px;
     border-radius: 10px;
-    margin-top: 20px;
-    display: flex;
-    justify-content: space-between;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 0 10px #000;
 }
 
-.lifebar{
-    height: 15px;
-    border: 0.5 solid #333;
-    border-radius: 5px;
-}
-
-.lifebar .bar{
-    height: inherit;
-    background-color: red;
-    border-radius: 2px;
-}
-
-
-.log{
+.lifebar {
     width: 100%;
-    max-width: 500px;
-    border: 1px solid dotted #999;
-    height: 200px;
-    overflow-y: scroll;
-    box-shadow: 0 5px 5px;
-    margin-top: 20px;
-    background: rgb(243, 238, 238);
+    height: 20px;
+    background: #555;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.bar {
+    height: 100%;
+    width: 100%;
+    background: #0f0;
+    transition: width 0.3s;
+}
+
+.name {
+    display: block;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.attackButton {
+    padding: 8px 20px;
+    font-size: 1em;
+    background: #444;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.2s;
+}
+
+.attackButton:hover {
+    background: #666;
+}
+
+.log {
+    margin: 40px auto 0 auto;
+    width: 500px;
+    background: #111;
+    border-radius: 10px;
+    padding: 20px;
+    list-style: none;
+    min-height: 60px;
+    box-shadow: 0 0 10px #000;
+}
+
+.log li {
+    margin-bottom: 8px;
+    font-size: 1em;
 }
