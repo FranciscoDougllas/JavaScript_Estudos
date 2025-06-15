@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
+            width: 100%;
+            max-width: 500px;
+            height: 100vh;
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #f0f0f0;
+        }
+        h1{
+            text-align: center;
+        }
+        fieldset{
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            border: 1px solid #000;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            gap: 20px;
+        }
+        fieldset input{
+            padding: 5px;
+            border: 1px solid #000;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            width: 100%;
+        }
+        /* .posts{
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            border: 1px solid #000;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        } */
+        button{
+            width: 100%;
+            padding: 5px;
+            border: 1px solid #000;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            background: rgb(229, 229, 107);
+            font-size: 1.3rem;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 5px 10px #555;
+            transition: 0.3s;
+        }
+        button:hover{
+            background: #b17f7f;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <h1>Blgo Fake Teste Com Programação Assíncrona</h1>
+
+    <fieldset>
+        <legend>Cadastro de novo Post</legend>
+
+        <div>
+            <input type="text" id="titleField" placeholder="Titulo do Post">
+        </div>
+
+        <div>
+            <input type="text" id="bodyField" placeholder="Conteúdo do Post">
+        </div>
+
+        <div>
+            <button id="insertButton">Inserir Post</button>
+        </div>
+    </fieldset>
+
+    <div class="posts"></div>
+
+    <script src="./11.1.10_Projeto.js"></script>
+</body>
+</html>
