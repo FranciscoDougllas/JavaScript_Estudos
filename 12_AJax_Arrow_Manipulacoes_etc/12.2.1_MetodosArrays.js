@@ -75,3 +75,15 @@ function reduce(array, callback, initialValue) {
 //Metodo concat - Concatena dois arrays
 let lista2 = ['Melancia', 'Abacaxi', 'Limão', 'Tangerina', 'Cereja'];
 console.log(lista.concat(lista2));
+
+
+//Metodo find - Retorna o primeiro elemento que satisfaz uma condição
+let lista3 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+console.log(lista3.find(function(item) {
+    return item > 5;
+}));
+
+//Metodo findIndex - Retorna o índice do primeiro elemento que satisfaz uma condição
+console.log(lista3.findIndex(function(item) {
+    return item > 5;
+}));
