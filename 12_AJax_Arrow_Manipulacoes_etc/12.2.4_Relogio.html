@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relógio Digital</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: 'Courier New', Courier, monospace;
+            gap: 20px;
+            background-color: #f0f0f0;
+        }
+        #relogio {
+            padding: 20px;
+            background: #444;
+            font-size: 2rem;
+            border-radius: 10px;
+            color: #fff;
+            font-weight: bold;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .btns {
+            width: 300px;
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            background: #444;
+            color: #fff;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background: #555;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Relógio Digital</h1>
+    <p id="relogio">00:00:00</p>
+
+    <div class="btns">
+        <button id="comeca">Iniciar</button>
+        <button id="para">Parar</button>
+        <button id="reset">Resetar</button>
+    </div>
+
+    <script>
+        // Variável global para armazenar o intervalo
+        let interval;
+
+        // Função para iniciar o relógio
+        function start() {
+            // Limpa qualquer intervalo existente antes de criar um novo
+            stop();
+            interval = setInterval(showTime, 1000);
+        }
+
+        // Função para parar o relógio
+        function stop() {
+            clearInterval(interval);
+        }
+
+        // Função para resetar o relógio
+        function reset() {
+            stop();
+            document.getElementById("relogio").innerHTML = "00:00:00";
+        }
+
+        // Função para exibir o horário atual
+        function showTime() {
+            const dia = new Date();
+            const hora = dia.getHours();
+            const minuto = dia.getMinutes();
+            const segundo = dia.getSeconds();
+            
+            // Formata os números para sempre terem 2 dígitos
+            const horaFormatada = hora.toString().padStart(2, '0');
+            const minutoFormatado = minuto.toString().padStart(2, '0');
+            const segundoFormatado = segundo.toString().padStart(2, '0');
+            
+            const horaCompleta = `${horaFormatada}:${minutoFormatado}:${segundoFormatado}`;
+            document.getElementById("relogio").innerHTML = horaCompleta;
+        }
+
+        // Adiciona os event listeners aos botões
+        document.getElementById("comeca").addEventListener("click", start);
+        document.getElementById("para").addEventListener("click", stop);
+        document.getElementById("reset").addEventListener("click", reset);
+
+        // Inicia o relógio automaticamente
+        start();
+    </script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+let array = ['João', 'Maria', 'Pedro', 'Ana', 'Bruno'];
