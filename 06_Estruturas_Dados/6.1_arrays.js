@@ -1,11 +1,17 @@
-//Arrays em JavaScript
+// Arrays em JavaScript
 
-//Declaração de um array
+// Um array é uma estrutura de dados que permite armazenar múltiplos valores em uma única variável.
+// Os arrays em JavaScript podem conter elementos de qualquer tipo, como números, strings, objetos, etc.
+
+// Exemplo de declaração de um array:
 let frutas = ['maçã', 'banana', 'laranja'];
 
-//Acessando elementos do array
-console.log(frutas[0]); // 'maçã'
-console.log(frutas[1]); // 'banana'
+// Para acessar um elemento do array, utilizamos o índice (a contagem começa do zero):
+console.log(frutas[0]); // Exibe 'maçã'
+console.log(frutas[1]); // Exibe 'banana'
 
-//Tamanho do array
-console.log(frutas.length); // 3
+// Podemos descobrir o tamanho do array usando a propriedade length:
+console.log(frutas.length); // Exibe 3, pois há três elementos no array
+
+// O método console.table exibe o array em formato de tabela no console, facilitando a visualização:
+console.table(frutas);
